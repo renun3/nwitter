@@ -33,6 +33,8 @@ const Auth = () => {
         }
     };
 
+    const toggleAccount = () => setNewAccount((prev) => !prev);
+
     return (
         <div>
             <form onSubmit={onSubmit}>
@@ -56,6 +58,9 @@ const Auth = () => {
                 <br/>
                 {error}
             </form>
+            <span onClick={toggleAccount}>
+                {newAccount ? "Sign In" : "Create Account"}
+            </span>
             <div>
                 <button>Countinue with Google</button>
                 <button>Countinue with Github</button>
